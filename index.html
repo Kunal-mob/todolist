@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon"
+        href="https://static.vecteezy.com/system/resources/previews/006/883/363/large_2x/to-do-list-icon-for-web-vector.jpg"
+        type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="w-5/6 h-full container m-auto ">
+        <div class="flex flex-col items-center gap-5 mb-5">
+            <h1 class="text-2xl font-bold">To-Do List</h1>
+            <div class="w-5/6 flex  justify-center gap-3 ">
+                <input id="input-task" class="w-2/5 px-5 py-2 rounded outline-none" placeholder="Enter Task..."
+                    type="text">
+                <button id="add-btn" class="py-2 px-6 rounded bg-blue-500 text-white">Add</button>
+            </div>
+            <div class="w-5/6 flex justify-center items-center gap-3">
+                <input id="search-title" class="py-2 px-5 rounded outline-none" type="text" placeholder="Title">
+                <span class="text-gray-100">or</span>
+
+
+                <button id="search-btn" class="py-2 px-6 rounded bg-yellow-500 text-white">Search</button>
+            </div>
+            <div class="flex gap-3">
+                <input class="py-2 px-5 rounded outline-none" id="date-from" type="date"><span
+                    class="text-gray-100">To</span>
+                <input class="py-2 px-5 rounded outline-none" id="date-to" type="date">
+                <button id="filter-btn" class="py-2 px-6 rounded bg-green-500 text-white">Filter</button>
+            </div>
+
+        </div>
+        <hr>
+        <div class="flex justify-center items-center p-5">
+            <div id="loader">
+                <img class="w-11" src="./assets/kYqVAj5QNOXug.webp" alt="">
+            </div>
+            <div class="w-full gap-10 flex  flex-col justify-between ">
+                <div id="task-lists">
+                    <div class="flex mb-10 justify-between">
+                        <button id="previous-btn"
+                            class="bg-gray-100 pointer hover:bg-gray-300 px-3 py-1 rounded-md">Previous</button><button
+                            id="next-btn"
+                            class="bg-gray-100 pointer hover:bg-gray-300 px-3 py-1 rounded-md">Next</button>
+
+                    </div>
+                    <div id="task-list" class=" gap-6 flex  flex-col"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
